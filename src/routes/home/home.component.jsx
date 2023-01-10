@@ -1,44 +1,42 @@
-import { Outlet } from "react-router-dom";
-import Directory from "../../component/directory/directory.component";
+import { Outlet } from 'react-router-dom';
+
+import Directory from '../../components/directory/directory.component';
 
 const Home = () => {
-
   const categories = [
     {
       id: 1,
-      tilte: 'Hats',
-      imageUrl:	"https://i.ibb.co/cvpntL1/hats.png",
+      title: 'hats',
+      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     },
     {
       id: 2,
-      tilte: 'Jackets',
-      imageUrl:	"https://i.ibb.co/px2tCc3/jackets.png",
+      title: 'jackets',
+      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
     },
     {
       id: 3,
-      tilte: 'Sneakers',
-      imageUrl:	"https://i.ibb.co/0jqHpnp/sneakers.png",
+      title: 'sneakers',
+      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
     },
     {
       id: 4,
-      tilte: 'Womens',
-      imageUrl:	"https://i.ibb.co/GCCdy8t/womens.png",
+      title: 'womens',
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
     },
     {
       id: 5,
-      tilte: 'Mens',
-      imageUrl:	"https://i.ibb.co/R70vBrQ/men.png",
-    }
+      title: 'mens',
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+    },
   ];
-  return(
+
+  return (
     <div>
-        <Outlet />
-        <Directory categories={categories} />;
+      <Directory categories={categories} />
+      <Outlet />
     </div>
   );
-  
-
-
-}
+};
 
 export default Home;
