@@ -51,12 +51,12 @@ export const addCollectionAndDocuments = async (
   objectsToAdd,
   field
 ) => {
-  const batch = writeBatch(db);
   const collectionRef = collection(db, collectionKey);
-  
+  const batch = writeBatch(db);
+
   objectsToAdd.forEach((object) => {
-     const docRef = doc(collectionRef, object.title.toLowerCase());
-     batch.set(docRef, object);
+    const docRef = doc(collectionRef, object.title.toLowerCase());
+    batch.set(docRef, object);
   });
 
   await batch.commit();
@@ -75,7 +75,7 @@ export const getCategoriesAndDocuments = async () => {
   }, {});
 
   return categoryMap;
-}
+};
 
 export const createUserDocumentFromAuth = async (
   userAuth,
